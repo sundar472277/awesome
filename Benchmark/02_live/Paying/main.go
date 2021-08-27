@@ -15,5 +15,4 @@ func ConcatString(s []string) string {
 func SplitString(b string) []string {
 	c := strings.Split(b, " ")
 	return c
-
 }
