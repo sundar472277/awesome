@@ -16,7 +16,7 @@ func main() {
 	fmt.Println("value of x is :", a)
 	fmt.Println("value of x[1] :", x[1])
 	//strings can be re assigned but cannot be mutable
-	x[1] = 120
+	//x[1] = 120
 
 	for _, v := range x {
 		fmt.Println(v)
