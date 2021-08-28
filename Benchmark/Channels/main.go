@@ -13,21 +13,15 @@ func main() {
 
 	go func() {
 		fmt.Println("this is first function")
-		x <- 42
+		for i := 0; i <= 5; i++ {
+			x <- i
+		}
+		close(x)
 	}()
 
-	go func() {
-		fmt.Println("this is second function")
-		x <- 43
-	}()
-
-	go func() {
-		fmt.Println("this is third function")
-		x <- 44
-	}()
-	fmt.Println(<-x)
-	fmt.Println(<-x)
-	fmt.Println(<-x)
+	for v := range x {
+		fmt.Println("value retrieved from channel x :", v)
+	}
 
 	fmt.Println("no of go rt af:", runtime.NumGoroutine())
 	fmt.Println("main go routine ended...")
