@@ -13,7 +13,7 @@ func main() {
 	fmt.Println()
 	bs, err := bcrypt.GenerateFromPassword([]byte(s), 2)
 	fmt.Println("bs value is :", bs)
-	fmt.Println("error is :", err)
+	fmt.Println("error is 1 :", err)
 	if err != nil {
 		fmt.Println("error is :", err)
 	}
